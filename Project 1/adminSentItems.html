@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--
+-->
+<html>
+<head>
+    <title>Your Email System</title>
+    <link rel="stylesheet" href="./styles/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles/index.css">
+    <script src="./scripts/jquery-3.4.1.min.js" async></script>
+    <script src="./scripts/scripts.js" async></script>
+</head>
+<body>
+    <div data-role="header" class="input-group-text">SENT ITEMS</div>
+
+    <div data-role="content">
+        <div data-type="horizontal">
+            <a class="btn titleButton"><u>TO</u></a>
+            <a class="btn titleButton"><u>SUBJECT</u></a>
+        </div>
+        <br>
+        <div class="toDisplaySentItems" onload="loadAdminSent()">
+        </div>
+    </div>
+
+    <div data-role="footer" class="input-group-text"></div>
+
+    <div data-role="controlgroup">
+        <a data-role="button" class="btn normalButton" onclick="linkAdminInbox()">Inbox</a>
+        <a data-role="button" class="btn normalButton" onclick="linkCompose(4)">Compose</a>
+    </div>
+</body>
+</html>
