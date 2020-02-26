@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--
+-->
+<html>
+<head>
+    <title>Admin Email System</title>
+    <link rel="stylesheet" href="./styles/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles/index.css">
+    <script src="./scripts/jquery-3.4.1.min.js" async></script>
+    <script src="./scripts/scripts.js" async></script>
+</head>
+<body>
+    <div data-role="header" class="input-group-text">INBOX</div>
+
+    <div data-role="content">
+        <div data-type="horizontal">
+            <a class="btn titleButton"><u>FROM</u></a>
+            <a class="btn titleButton"><u>SUBJECT</u></a>
+        </div>
+        <br>
+        <div class="toDisplayEmails" onload="loadAdminInbox()">
+            <!--Need to figure out how to do this => I say we use a for loop for each inbox
+                Then when the user links to an inbox, we store the index of that email.
+                Then we use that index to read for the view Inbox.
+                We need to store a json like var json = {"mails": [<array of mails>]}
+            -->
+        </div>
+    </div>
+
+    <div data-role="footer" class="input-group-text"></div>
+
+    <div data-role="controlgroup">
+        <a data-role="button" class="btn normalButton" onclick="linkAdminSentItems()">Sent Items</a>
+        <a data-role="button" class="btn normalButton" onclick="linkCompose(3)">Compose</a>
+    </div>
+</body>
+</html>

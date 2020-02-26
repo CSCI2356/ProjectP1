@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<!--
+-->
+<html>
+<head>
+    <title>Your Email System</title>
+    <link rel="stylesheet" href="./styles/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles/index.css">
+    <script src="./scripts/jquery-3.4.1.min.js" async></script>
+    <script src="./scripts/scripts.js" async></script>
+</head>
+<body>
+    <div data-role="header" class="input-group-text">INBOX</div>
+
+    <div data-role="content" class="toDisplayInboxEmails" onload="loadStudentInbox()">
+        <div data-type="horizontal">
+            <a class="btn titleButton"><u>FROM</u></a>
+            <a class="btn titleButton"><u>SUBJECT</u></a>
+            <a> </a><!--Required for delete button-->
+        </div>
+        <br>
+        <!--The following is my idea for displaying an mail-->
+        <div class="btn emailRow">
+            <a class="btn email">FROM</a>
+            <a class="btn email">SUBJECT</a>
+            <a class="btn deleteKey" onclick="deleteEmail()">X</a>
+        </div> 
+        <!---->
+    </div>
+
+    <div data-role="footer" class="input-group-text"></div>
+
+    <div data-role="controlgroup">
+        <a data-role="button" class="btn normalButton" onclick="linkSent()">Sent Items</a>
+        <a data-role="button" class="btn normalButton" onclick="linkCompose(1)">Compose</a>
+    </div>
+</body>
+</html>

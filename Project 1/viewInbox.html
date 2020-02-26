@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- 
+-->
+<html>
+<head>
+    <title>Your Email System</title>
+    <link rel="stylesheet" href="./styles/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles/index.css">
+    <script src="./scripts/jquery-3.4.1.min.js"></script>
+    <script src="./scripts/scripts.js"></script>
+</head>
+<body>
+    <div data-role="header" class="input-group-text">VIEWING INBOX ITEM</div>
+
+    <div data-role="content" onload="fillInboxTextBoxes">
+        <div class="input-group-text" onclick="showHelpForTo" data-type="horizontal">
+            <label for="toTextBox" class="myLabel">From</label>
+            <input type="email" class="unclickableLongTextBox">
+        </div>
+
+        <div class="input-group-text" onclick="showHelpForTo" data-type="horizontal">
+            <label for="ccTextBox" class="myLabel">Cc</label>
+            <input type="email" class="unclickableLongTextBox">
+        </div>
+
+        <div class="input-group-text" onclick="showHelpForTo" data-type="horizontal">
+            <label for="subjectTextBox" class="myLabel">Subject</label>
+            <input type="email" class="unclickableLongTextBox">
+        </div>
+
+        <div class="input-group-text" onclick="showHelpForTo" data-type="horizontal">
+            <label for="bodyTextBox" class="myLabel">Body</label>
+            <textarea class="unclickableEmailTextBox"></textarea>
+        </div>
+    </div>
+
+    <div data-role="footer" class="input-group-text"></div>
+
+    <div data-role="controlgroup" data-type="horizontal">
+        <a data-role="button" class="btn normalButton" onclick="reply()">Reply</a>
+        <a data-role="button" class="btn normalButton" onclick="linkBackViewInbox()">Back</a>
+    </div>
+</body>
+</html>
