@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- 
+-->
+<html>
+<head>
+    <title>Admin Email System</title>
+    <link rel="stylesheet" href="./styles/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles/index.css">
+    <script src="./scripts/jquery-3.4.1.min.js"></script>
+    <script src="./scripts/adminComposeScripts.js"></script>
+</head>
+<body>
+    <div data-role="header" class="input-group-text">COMPOSING</div>
+
+    <div data-role="content">
+        <div class="input-group-text" data-type="horizontal">
+            <label for="toTextBox" class="myLabel" onclick="showHelpForTo()" >To</label>
+            <input type="email" class="longTextBox" id="toTextBox">
+        </div>
+
+        <div class="input-group-text"  data-type="horizontal">
+            <label for="ccTextBox" class="myLabel" onclick="showHelpForCc()">Cc</label>
+            <input type="email" class="longTextBox" id="ccTextBox">
+        </div>
+
+        <div class="input-group-text" data-type="horizontal">
+            <label for="subjectTextBox" class="myLabel" onclick="showHelpForSubject()">Subject</label>
+            <input type="email" class="longTextBox" id="subjectTextBox">
+        </div>
+
+        <div class="input-group-text" data-type="horizontal">
+            <label for="bodyTextBox" class="myLabel" onclick="showHelpForBody()">Body</label>
+            <textarea class="emailTextBox" id="composeTextBox"></textarea>
+        </div>
+    </div>
+
+    <div data-role="footer" class="input-group-text"></div>
+
+    <div data-role="controlgroup" data-type="horizontal">
+        <a data-role="button" class="btn normalButton" onclick="sendAdminEmail()">Send</a>
+        <a data-role="button" class="btn normalButton" onclick="linkBack()">Cancel</a>
+    </div>
+</body>
+</html>
