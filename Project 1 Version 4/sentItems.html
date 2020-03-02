@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--
+-->
+<html>
+<head>
+    <title>Your Email System</title>
+    <link rel="stylesheet" href="./styles/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles/index.css">
+    <script src="./scripts/jquery-3.4.1.min.js" async></script>
+    <script src="./scripts/studentScripts.js" async></script>
+    <script src="./scripts/displayEmails.js" async></script>
+</head>
+<body  onload="loadStudentSent()">
+    <span class="myHeader">
+        <div data-role="header" class="input-group-text">SENT ITEMS</div>
+    </span>
+
+    <div data-role="content">
+        <div data-type="horizontal" class="btn unclickable">
+            <a class="btn titleButton"><u>TO</u></a>
+            <a class="btn titleButton"><u>SUBJECT</u></a>
+            <a> </a>
+        </div>
+        <br><br>
+        <div class="toDisplayEmails"></div>
+    </div>
+
+    <div data-role="footer" class="input-group-text"></div>
+
+    <div data-role="controlgroup">
+        <a data-role="button" class="btn normalButton" onclick="linkInbox()">Inbox</a>
+        <a data-role="button" class="btn normalButton" onclick="linkStudentCompose(2)">Compose</a>
+    </div>
+</body>
+</html>
