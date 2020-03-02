@@ -1,0 +1,136 @@
+/*
+ * author : Humaid M. Agowun
+ *
+ * index.css : 
+ */ 
+
+
+body {
+    background-color :#f8f9fa; /*RGB for grey*/ 
+    width: 50%;
+}
+
+label {
+    padding: 10px 10px 0px 10px; /*top right bottom left*/
+    width: 70px;
+    text-align : right;
+}
+
+
+/*CLASSES*/
+
+.myHeader:hover {
+    cursor : default;
+}
+
+.unclickable:hover {
+    cursor: default;
+}
+
+.unclickable {
+    width: 90%;
+}
+
+.emailRow {
+    width: 90%;
+}
+
+.emailTable {
+    padding: 0px;
+}
+
+.emailRow:Hover, div.emailRow:Hover a.email  {
+    background-color: darkgrey; 
+    cursor: pointer; /*pointer is the value for a hand.*/
+}
+
+.titleButton {
+    width: 49%;
+    text-align: left;
+    background-color: #f8f9fa; /*RGB for grey*/
+    font-weight: bold;
+}
+
+.email {
+    width: 49%;
+    text-align: left;
+    background-color: #f8f9fa; /*RGB for grey*/
+}
+
+.deleteKey {
+    width: 5%;
+}
+
+.deleteKey:hover {
+    background-color: red;
+}
+
+.normalButton {
+    width: 150px;
+    text-align: center;
+    font-weight: 500;
+    background-color: lightgray;
+    transition-duration: 0.4s;
+}
+
+.normalButton:hover {
+    background-color: snow;
+    cursor : default; /*Default is the value for an arrow pointer*/
+}
+
+.myLabel:hover {
+    cursor: help;
+}
+
+.myLabel {
+    width: 10%;
+}
+ 
+.longTextBox {
+    width : 90%;
+    padding: 5px;
+}
+
+.unclickableLongTextBox {
+    width : 90%;
+    padding: 5px;
+    color: grey;
+
+}
+
+.emailTextBox {
+    width : 90%;
+    box-sizing: border-box;
+    height: 300px;
+    padding: 5px;
+}
+
+.unclickableEmailTextBox {
+    width : 90%;
+    box-sizing: border-box;
+    height: 300px;
+    padding: 5px;
+    color: grey;
+}
+
+.emailCompartment { 
+    /*part that was copied from input-group-text*/
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: .375rem .75rem;
+    margin-bottom: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    text-align: center;
+    white-space: nowrap;
+    background-color: #e9ecef;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    /*part that was added*/
+    padding : 10px;
+    padding-left: 80px;
+}
