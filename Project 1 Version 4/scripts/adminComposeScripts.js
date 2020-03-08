@@ -1,5 +1,12 @@
 
 /*
+ * Mark Trickett (A00416603)
+ * Humaid Muhammad Agowun (A00430163)
+ * Diego Gardiner (A00423960)
+ * JavaScript file for Admin Compose (Project P1)
+ */
+
+/*
  * Important comments:
  *
  * Our email JSON looks like this: 
@@ -11,6 +18,7 @@
  * }
  */
 
+//Constants for admin inbox and sent items
 const FROM_ADMIN_INBOX = 3;
 const FROM_ADMIN_SENT_ITEMS = 4;
 
@@ -27,6 +35,7 @@ const ADMIN_SENT_ITEMS_KEY = "adminSent";
 
 /*buttons methods*/
 function linkBack() {
+    //function that links back
     localStorage.removeItem("fromWhere");
     window.history.back();
 }
@@ -55,6 +64,7 @@ function storeAdminEmailTwice(cc, subject, body) {
 }
 
 function createEmailJSON (partner, cc, subject, emailText) {
+    //create email in JSON form
     return {"conversationPartner" : partner, "cc" : cc, 
             "subject" : subject, "emailText" : emailText};
 }
@@ -73,6 +83,7 @@ function storeJSONAtGivenKey(json, key) {
 }
 
 function linkBackAfterSending() {
+    // Function that links back to previous page after sending
     try {
         var fromWhere = getFromWhereComposeWasClicked()
         linkBackToCorrectPage(fromWhere);
@@ -82,6 +93,7 @@ function linkBackAfterSending() {
 }
 
 function getFromWhereComposeWasClicked() {
+    // Removes from local storage
     var fWhere = JSON.parse(localStorage.getItem("fromWhere")).fromWhere;
     localStorage.removeItem("fromWhere");
     return fWhere;

@@ -1,7 +1,9 @@
+
 /*
- * author : Humaid Muhammad Agowun (A00430163)
- * 
- * scripts.js :
+ * Mark Trickett (A00416603)
+ * Humaid Muhammad Agowun (A00430163)
+ * Diego Gardiner (A00423960)
+ * JavaScript file for Student (Project P1)
  */
 
 /*
@@ -31,6 +33,7 @@ function linkStudentSent() {
     window.location.href = "sentItems.html";
 }
 
+// function that links admin compose page
 function linkStudentCompose(fWhere) {
     try {
         setUpLinkBackJSON(fWhere);
@@ -40,11 +43,13 @@ function linkStudentCompose(fWhere) {
     }
 }
 
+// function that returns user to previous back
 function setUpLinkBackJSON(fWhere) {
     var json = {"fromWhere" : fWhere};
     localStorage.setItem("fromWhere", JSON.stringify(json))
 }
 
+// function that loads the admin inbox
 function loadStudentInbox() {
     try {
         addEmailsFromKey(STUDENT_INBOX_KEY);
@@ -58,6 +63,7 @@ function linkInbox() {
     window.location.href = "index.html";
 }
 
+// function that loads the admin sent page
 function loadStudentSent() {
     try {
         addEmailsFromKey(STUDENT_SENT_ITEMS_KEY);
@@ -66,6 +72,8 @@ function loadStudentSent() {
     }
 }
 
+/*Methods that appear as you display email rows*/
+// function that links back to correct page.
 function linkBackToCorrectPage(fromWhere) {
     if (fromWhere === FROM_STUDENT_INBOX) {
         window.location.href = "index.html";

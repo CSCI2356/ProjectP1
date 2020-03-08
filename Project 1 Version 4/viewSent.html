@@ -1,42 +1,55 @@
 <!DOCTYPE html>
-<!-- 
+<!-- HTML file for viewing sent item-->
+<!--
+Project P1
+Humaid M. Agowun (A00430163)
+Mark Trickett (A00416603)
+Diego Gardiner (A00423960)
 -->
 <html>
 <head>
     <title>Your Email System</title>
+    <!-- imported scripts  -->
     <link rel="stylesheet" href="./styles/bootstrap.min.css">
     <link rel="stylesheet" href="./styles/index.css">
     <script src="./scripts/jquery-3.4.1.min.js"></script>
     <script src="./scripts/viewEmails.js"></script>
     <script src="./scripts/showHelp.js"></script>
 </head>
+<!-- onload calls function fillTextBoxes() which retrieves from local storage
+items that were sent  -->
 <body onload="fillTextBoxes()">
     <div data-role="header" class="input-group-text">VIEWING SENT ITEM</div>
-
+    <!-- Divs that layout Inbox item page -->
     <div data-role="content">
         <div class="input-group-text" data-type="horizontal">
+        <!-- To label that onclick loads help  -->
             <label for="partnerTextBox" class="myLabel" onclick="showHelpForTo()">To</label>
             <input type="email" class="unclickableLongTextBox" id="partnerTextBox">
         </div>
 
         <div class="input-group-text" data-type="horizontal">
+        <!-- Cc label that onclick loads help  -->
             <label for="ccTextBox" class="myLabel" onclick="showHelpForCc()">Cc</label>
             <input type="email" class="unclickableLongTextBox" id="ccTextBox">
         </div>
 
         <div class="input-group-text" data-type="horizontal">
+        <!-- Subject label that onclick loads help  -->
             <label for="subjectTextBox" class="myLabel" onclick="showHelpForSubject()">Subject</label>
             <input type="email" class="unclickableLongTextBox" id="subjectTextBox">
         </div>
 
         <div class="input-group-text" data-type="horizontal">
+        <!-- Body label that onclick loads help  -->
             <label for="bodyTextBox" class="myLabel" onclick="showHelpForBody()">Body</label>
             <textarea class="unclickableEmailTextBox" id="composeTextBox"></textarea>
         </div>
     </div>
 
     <div data-role="footer" class="input-group-text"></div>
-
+    
+    <!-- Button that links user back to sent items page -->
     <div data-role="controlgroup" data-type="horizontal">
         <a data-role="button" class="btn normalButton" onclick="linkBackViewSent()">Back</a>
     </div>

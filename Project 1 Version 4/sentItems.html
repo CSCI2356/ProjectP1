@@ -1,20 +1,28 @@
 <!DOCTYPE html>
+<!-- HTML code for Student Sent Items page-->
 <!--
+Project P1
+Humaid M. Agowun (A00430163)
+Mark Trickett (A00416603)
+Diego Gardiner (A00423960)
 -->
 <html>
 <head>
     <title>Your Email System</title>
+    <!-- scripts that are imported  -->
     <link rel="stylesheet" href="./styles/bootstrap.min.css">
     <link rel="stylesheet" href="./styles/index.css">
     <script src="./scripts/jquery-3.4.1.min.js" async></script>
     <script src="./scripts/studentScripts.js" async></script>
     <script src="./scripts/displayEmails.js" async></script>
 </head>
+<!-- onload calls function loadStudentSent() that essentially refreshes pages
+and adds any corresponsing sent emails to into table to view  -->
 <body  onload="loadStudentSent()">
     <span class="myHeader">
         <div data-role="header" class="input-group-text">SENT ITEMS</div>
     </span>
-
+    <!-- Main divs for sent items  -->
     <div data-role="content">
         <div data-type="horizontal" class="btn unclickable">
             <a class="btn titleButton"><u>TO</u></a>
@@ -27,6 +35,8 @@
 
     <div data-role="footer" class="input-group-text"></div>
 
+    <!-- Buttons that link page to Inbox and compose using functions linkInbox()
+    and linkStudentCompose(2)  -->
     <div data-role="controlgroup">
         <a data-role="button" class="btn normalButton" onclick="linkInbox()">Inbox</a>
         <a data-role="button" class="btn normalButton" onclick="linkStudentCompose(2)">Compose</a>

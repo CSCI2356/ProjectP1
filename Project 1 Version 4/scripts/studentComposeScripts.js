@@ -1,5 +1,12 @@
 
 /*
+ * Mark Trickett (A00416603)
+ * Humaid Muhammad Agowun (A00430163)
+ * Diego Gardiner (A00423960)
+ * JavaScript file for Student Compose (Project P1)
+ */
+
+/*
  * Important comments:
  *
  * Our email JSON looks like this: 
@@ -11,6 +18,7 @@
  * }
  */
 
+//Constants for student inbox and sent items
 const FROM_STUDENT_INBOX = 1;
 const FROM_STUDENT_SENT_ITEMS = 2;
 
@@ -28,6 +36,7 @@ const ADMIN_SENT_ITEMS_KEY = "adminSent";
 /*buttons methods*/
 
 function linkBack() {
+    //function that links back
     localStorage.removeItem("fromWhere");
     window.history.back();
 }
@@ -57,6 +66,7 @@ function storeStudentEmailTwice(to, cc, subject, body) {
 }
 
 function createEmailJSON (partner , cc, subject, emailText) {
+    //create email in JSON form
     return {"conversationPartner" : partner, "cc" : cc, 
             "subject" : subject, "emailText" : emailText};
 }
@@ -76,6 +86,7 @@ function storeJSONAtGivenKey(json, key) {
 }
 
 function linkBackAfterSending() {
+     // Function that links back to previous page after sending
     try {
         var fromWhere = getFromWhereComposeWasClicked()
         linkBackToCorrectPage(fromWhere);
@@ -94,6 +105,7 @@ function linkBackToCorrectPage(fromWhere) {
 }
 
 function getFromWhereComposeWasClicked() {
+    // Removes from local storage
     var fWhere = JSON.parse(localStorage.getItem("fromWhere")).fromWhere;
     localStorage.removeItem("fromWhere");
     return fWhere;

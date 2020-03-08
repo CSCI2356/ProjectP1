@@ -1,5 +1,12 @@
 
 /*
+ * Mark Trickett (A00416603)
+ * Humaid Muhammad Agowun (A00430163)
+ * Diego Gardiner (A00423960)
+ * JavaScript file for displaying emails (Project P1)
+ */
+
+/*
  * Our local storage JSON looks like:
  *
  * {emails : [email1, email2, email3]}
@@ -35,6 +42,7 @@ const ADMIN_INBOX_KEY = "adminInbox";
 const STUDENT_SENT_ITEMS_KEY = "studentSent";
 const ADMIN_SENT_ITEMS_KEY = "adminSent";
 
+// function that adds emails from respective key.
 function addEmailsFromKey(key) {
     var divPointer = $("div.toDisplayEmails");
     if (localStorage.getItem(key) !== null) {
@@ -50,6 +58,7 @@ function addEmailsFromKey(key) {
     }
 }
 
+//Function that creates new row and updates each row with content 
 function createNewRow(i, encoding, email) {
     return '<div data-type="horizontal">'
             + '<div class="btn emailRow" '
@@ -62,6 +71,7 @@ function createNewRow(i, encoding, email) {
         + '</div>';
 }
 
+//function that returns code from corresponding key
 function getCodeFromKey(key) {
     //Constants for key
     if (key == STUDENT_INBOX_KEY) return 1;
@@ -70,6 +80,7 @@ function getCodeFromKey(key) {
     if (key == ADMIN_SENT_ITEMS_KEY) return 4;
 }
 
+//function that returns key from corresponding code
 function getKeyFromEncoding(code) {
     if (code == 1) return STUDENT_INBOX_KEY;
     if (code == 2) return ADMIN_INBOX_KEY;
@@ -77,6 +88,7 @@ function getKeyFromEncoding(code) {
     if (code == 4) return ADMIN_SENT_ITEMS_KEY;
 }
 
+//function that deletes email
 function deleteEmail(encoding, i) {
     var key = getKeyFromEncoding(encoding);
     var currentPageFromWhere = getFromWhere(key);
@@ -92,6 +104,7 @@ function deleteEmail(encoding, i) {
     reloadPage(currentPageFromWhere);
 }
 
+//function that reloads and updates page
 function reloadPage(fromWhere) {
     if (fromWhere === FROM_ADMIN_INBOX) {
         window.location.href = "adminInbox.html";
@@ -104,6 +117,7 @@ function reloadPage(fromWhere) {
     }
 }
 
+//function that opens email
 function viewEmail(i , encoding) {
     try {
         var key = getKeyFromEncoding(encoding);
@@ -125,6 +139,7 @@ function viewEmail(i , encoding) {
     }
 }
 
+//function that returns fromWhere depending on the key
 function getFromWhere(key) {
     if (key == STUDENT_INBOX_KEY) {
         return FROM_STUDENT_INBOX;

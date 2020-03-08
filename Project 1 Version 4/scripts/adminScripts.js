@@ -1,9 +1,10 @@
-/*
- * author : Humaid Muhammad Agowun (A00430163)
- *
- * adminScripts.js
- */
 
+/*
+ * Mark Trickett (A00416603)
+ * Humaid Muhammad Agowun (A00430163)
+ * Diego Gardiner (A00423960)
+ * JavaScript file for Admin (Project P1)
+ */
 
 /*
  * Important comments:
@@ -31,6 +32,7 @@ function linkAdminSent() {
     window.location.href = "adminSentItems.html";
 }
 
+// function that links admin compose page
 function linkAdminCompose(fWhere) {
     try {
         setUpLinkBackJSON(fWhere);;
@@ -40,11 +42,13 @@ function linkAdminCompose(fWhere) {
     }
 }
 
+// function that returns user to previous back
 function setUpLinkBackJSON(fWhere) {
     var json = {"fromWhere" : fWhere};
     localStorage.setItem("fromWhere",JSON.stringify(json))
 }
 
+// function that loads the admin inbox
 function loadAdminInbox() {
     try {
         addEmailsFromKey(ADMIN_INBOX_KEY);
@@ -58,6 +62,7 @@ function linkAdminInbox() {
     window.location.href = "adminInbox.html";
 }
 
+// function that loads the admin sent page
 function loadAdminSent() {
     try {
         addEmailsFromKey(ADMIN_SENT_ITEMS_KEY);
@@ -67,7 +72,7 @@ function loadAdminSent() {
 }
 
 /*Methods that appear as you display email rows*/
-
+// function that links back to correct page.
 function linkBackToCorrectPage(fromWhere) {
     if (fromWhere === FROM_ADMIN_INBOX) {
         window.location.href = "adminInbox.html";

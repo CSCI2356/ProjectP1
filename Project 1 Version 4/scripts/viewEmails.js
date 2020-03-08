@@ -1,19 +1,18 @@
-
 /*
- * author: Humaid Muhammad Agowun (A00430163)
- *
- * viewEmails.js :
- * script for viewSent and viewInbox
- */ 
+ * Mark Trickett (A00416603)
+ * Humaid Muhammad Agowun (A00430163)
+ * Diego Gardiner (A00423960)
+ * JavaScript file for displaying emails (Project P1)
+ */
 
-
+//Constants for fromWhere
 const FROM_STUDENT_INBOX = 1;
 const FROM_STUDENT_SENT_ITEMS = 2;
 
 const FROM_ADMIN_INBOX = 3;
 const FROM_ADMIN_SENT_ITEMS = 4;
 
-
+//function that fills textboxes with content.
 function fillTextBoxes() {
     try {
         var email = JSON.parse(localStorage.getItem("emailToView")).email;
@@ -26,6 +25,7 @@ function fillTextBoxes() {
     }
 }
 
+// function that links user back to view sent page.
 function linkBackViewSent() {
     var fromWhere = JSON.parse(localStorage.getItem("emailToView")).fromWhere;
     if (fromWhere == FROM_STUDENT_SENT_ITEMS) {
@@ -36,6 +36,7 @@ function linkBackViewSent() {
     localStorage.removeItem("emailToView");
 }
 
+//function that stores email text to local storage in JSON format
 function reply() {
     var fromWhere = JSON.parse(localStorage.getItem("emailToView")).fromWhere;
     if (fromWhere == FROM_ADMIN_INBOX) {
@@ -45,6 +46,7 @@ function reply() {
     }
 }
 
+//function that links back to compose
 function linkAdminCompose(fWhere) {
     try {
         setUpLinkBackJSON(fWhere);;
@@ -54,6 +56,7 @@ function linkAdminCompose(fWhere) {
     }
 }
 
+// function that links Student to compose page
 function linkStudentCompose(fWhere) {
     try {
         setUpLinkBackJSON(fWhere);
@@ -63,11 +66,13 @@ function linkStudentCompose(fWhere) {
     }
 }
 
+// function that saves the previous page to local storage for retrieval
 function setUpLinkBackJSON(fWhere) {
     var json = {"fromWhere" : fWhere};
     localStorage.setItem("fromWhere",JSON.stringify(json))
 }
 
+// function that links user back to inbox page.
 function linkBackViewInbox() {
     var fromWhere = JSON.parse(localStorage.getItem("emailToView")).fromWhere;
     if (fromWhere == FROM_STUDENT_INBOX) {

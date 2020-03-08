@@ -1,20 +1,31 @@
 <!DOCTYPE html>
+<!-- HTML file for Admin Sent Items-->
+
 <!--
+Project P1
+Humaid M. Agowun (A00430163)
+Mark Trickett (A00416603)
+Diego Gardiner (A00423960)
 -->
 <html>
 <head>
     <title>Admin Email System</title>
+    
+    <!-- Scripts that are imported  -->
     <link rel="stylesheet" href="./styles/bootstrap.min.css">
     <link rel="stylesheet" href="./styles/index.css">
     <script src="./scripts/jquery-3.4.1.min.js" async></script>
     <script src="./scripts/adminScripts.js" async></script>
     <script src="./scripts/displayEmails.js" async></script>
 </head>
+<!-- onload calls function loadAdminSent() which updates the page and loads
+ javascript  -->
 <body onload="loadAdminSent()">
     <span class="myHeader">
         <div data-role="header" class="input-group-text">SENT ITEMS</div>
     </span>
-
+    
+    <!-- HTML code for Admin Email sent items page  -->
     <div data-role="content">
         <div data-type="horizontal"class="btn unclickable">
             <a class="btn titleButton"><u>TO</u></a>
@@ -26,7 +37,9 @@
     </div>
 
     <div data-role="footer" class="input-group-text"></div>
-
+    
+    <!-- Buttons that take user to Inbox or compose page using functions linkAdminInbox() 
+    and linkAdminCompose()  -->
     <div data-role="controlgroup">
         <a data-role="button" class="btn normalButton" onclick="linkAdminInbox()">Inbox</a>
         <a data-role="button" class="btn normalButton" onclick="linkAdminCompose(4)">Compose</a>

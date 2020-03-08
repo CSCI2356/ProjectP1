@@ -1,15 +1,19 @@
+
 /*
- * author : Humaid M. Agowun
- *
- * index.css : 
- */ 
+ * Mark Trickett (A00416603)
+ * Humaid Muhammad Agowun (A00430163)
+ * Diego Gardiner (A00423960)
+ * JavaScript file for Student Compose (Project P1)
+ */
 
-
+/*IDs*/
+/* body color and size */
 body {
     background-color :#f8f9fa; /*RGB for grey*/ 
     width: 60%;
 }
 
+/* style which labels are laid out */
 label {
     padding: 10px 10px 0px 10px; /*top right bottom left*/
     width: 70px;
@@ -19,31 +23,38 @@ label {
 
 /*CLASSES*/
 
+/*hover over header*/
 .myHeader:hover {
     cursor : default;
 }
 
+/*unclickable button*/
 .unclickable:hover {
     cursor: default;
 }
 
+/*unclickable*/
 .unclickable {
     width: 90%;
 }
 
+/*email row style*/
 .emailRow {
     width: 90%;
 }
 
+/*email table style*/
 .emailTable {
     padding: 0px;
 }
 
+/*email row mouse style and highlight*/
 .emailRow:Hover, div.emailRow:Hover a.email  {
     background-color: darkgrey; 
     cursor: pointer; /*pointer is the value for a hand.*/
 }
 
+/*How title button is styles*/
 .titleButton {
     width: 49%;
     text-align: left;
@@ -51,20 +62,24 @@ label {
     font-weight: bold;
 }
 
+/*email stylew*/
 .email {
     width: 49%;
     text-align: left;
     background-color: #f8f9fa; /*RGB for grey*/
 }
 
+/*delete key style*/
 .deleteKey {
     width: 5%;
 }
 
+/*delete hover*/
 .deleteKey:hover {
     background-color: red;
 }
 
+/*Typical button*/
 .normalButton {
     width: 150px;
     text-align: center;
@@ -73,24 +88,29 @@ label {
     transition-duration: 0.4s;
 }
 
+/*Typical hover*/
 .normalButton:hover {
     background-color: snow;
     cursor : default; /*Default is the value for an arrow pointer*/
 }
 
+/*myLabel hover*/
 .myLabel:hover {
     cursor: help;
 }
 
+/*my label class*/
 .myLabel {
     width: 10%;
 }
- 
+
+/*long text class*/
 .longTextBox {
     width : 90%;
     padding: 5px;
 }
 
+/*long text box class*/
 .unclickableLongTextBox {
     width : 90%;
     padding: 5px;
@@ -98,6 +118,7 @@ label {
 
 }
 
+/*email textbox class*/
 .emailTextBox {
     width : 90%;
     box-sizing: border-box;
@@ -105,6 +126,7 @@ label {
     padding: 5px;
 }
 
+/*unclickable text box class*/
 .unclickableEmailTextBox {
     width : 90%;
     box-sizing: border-box;
