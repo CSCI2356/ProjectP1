@@ -1,0 +1,158 @@
+
+/*
+ * Mark Trickett (A00416603)
+ * Humaid Muhammad Agowun (A00430163)
+ * Diego Gardiner (A00423960)
+ * JavaScript file for Student Compose (Project P1)
+ */
+
+/*IDs*/
+/* body color and size */
+body {
+    background-color :#f8f9fa; /*RGB for grey*/ 
+    width: 60%;
+}
+
+/* style which labels are laid out */
+label {
+    padding: 10px 10px 0px 10px; /*top right bottom left*/
+    width: 70px;
+    text-align : right;
+}
+
+
+/*CLASSES*/
+
+/*hover over header*/
+.myHeader:hover {
+    cursor : default;
+}
+
+/*unclickable button*/
+.unclickable:hover {
+    cursor: default;
+}
+
+/*unclickable*/
+.unclickable {
+    width: 90%;
+}
+
+/*email row style*/
+.emailRow {
+    width: 90%;
+}
+
+/*email table style*/
+.emailTable {
+    padding: 0px;
+}
+
+/*email row mouse style and highlight*/
+.emailRow:Hover, div.emailRow:Hover a.email  {
+    background-color: darkgrey; 
+    cursor: pointer; /*pointer is the value for a hand.*/
+}
+
+/*How title button is styles*/
+.titleButton {
+    width: 49%;
+    text-align: left;
+    background-color: #f8f9fa; /*RGB for grey*/
+    font-weight: bold;
+}
+
+/*email stylew*/
+.email {
+    width: 49%;
+    text-align: left;
+    background-color: #f8f9fa; /*RGB for grey*/
+}
+
+/*delete key style*/
+.deleteKey {
+    width: 5%;
+}
+
+/*delete hover*/
+.deleteKey:hover {
+    background-color: red;
+}
+
+/*Typical button*/
+.normalButton {
+    width: 150px;
+    text-align: center;
+    font-weight: 500;
+    background-color: lightgray;
+    transition-duration: 0.4s;
+}
+
+/*Typical hover*/
+.normalButton:hover {
+    background-color: snow;
+    cursor : default; /*Default is the value for an arrow pointer*/
+}
+
+/*myLabel hover*/
+.myLabel:hover {
+    cursor: help;
+}
+
+/*my label class*/
+.myLabel {
+    width: 10%;
+}
+
+/*long text class*/
+.longTextBox {
+    width : 90%;
+    padding: 5px;
+}
+
+/*long text box class*/
+.unclickableLongTextBox {
+    width : 90%;
+    padding: 5px;
+    color: grey;
+
+}
+
+/*email textbox class*/
+.emailTextBox {
+    width : 90%;
+    box-sizing: border-box;
+    height: 300px;
+    padding: 5px;
+}
+
+/*unclickable text box class*/
+.unclickableEmailTextBox {
+    width : 90%;
+    box-sizing: border-box;
+    height: 300px;
+    padding: 5px;
+    color: grey;
+}
+
+.emailCompartment { 
+    /*part that was copied from input-group-text*/
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: .375rem .75rem;
+    margin-bottom: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    text-align: center;
+    white-space: nowrap;
+    background-color: #e9ecef;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    /*part that was added*/
+    padding : 10px;
+    padding-left: 80px;
+}

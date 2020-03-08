@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!-- HTML file for adminInbox ---->
+
+<!--
+Project P1
+Humaid M. Agowun (A00430163)
+Mark Trickett (A00416603)
+Diego Gardiner (A00423960)
+-->
+<html>
+<head>
+    <title>Admin Email System</title>
+    <!-- all scripts that are inported -->
+    <link rel="stylesheet" href="./styles/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles/index.css">
+    <script src="./scripts/jquery-3.4.1.min.js" async></script>
+    <script src="./scripts/adminScripts.js" async></script>
+    <script src="./scripts/displayEmails.js" async></script>
+</head>
+
+<!-- onLoad calls function loadAdminInbox() which loads admin inbox and corresponding contents -->
+<body onload="loadAdminInbox()">
+    <span class="myHeader"><div data-role="header" class="input-group-text">INBOX</div></span>
+    
+    <!-- HTML code for inbox  -->
+    <div data-role="content">
+        <div data-type="horizontal" class ="btn unclickable">
+            <a class="btn titleButton"><u>FROM</u></a>
+            <a class="btn titleButton"><u>SUBJECT</u></a>
+            <a> </a>
+        </div>
+        <br><br>
+        <div class="toDisplayEmails"></div>
+    </div>
+
+    <div data-role="footer" class="input-group-text"></div>
+    
+    <!-- HTML for Sent Items and Compose button. Buttons call functions 
+    linkAdminSent() and linkAdminCompose(3) which take user to correspoding screens -->
+    <div data-role="controlgroup">
+        <a data-role="button" class="btn normalButton" onclick="linkAdminSent()">Sent Items</a>
+        <a data-role="button" class="btn normalButton" onclick="linkAdminCompose(3)">Compose</a>
+    </div>
+</body>
+</html>

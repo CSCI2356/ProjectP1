@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!-- HTML file for message in inbox-->
+<!--
+Project P1
+Humaid M. Agowun (A00430163)
+Mark Trickett (A00416603)
+Diego Gardiner (A00423960)
+-->
+<html>
+<head>
+    <title>Your Email System</title>
+    <!-- Scripts imported -->
+    <link rel="stylesheet" href="./styles/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles/index.css">
+    <script src="./scripts/jquery-3.4.1.min.js"></script>
+    <script src="./scripts/viewEmails.js"></script>
+    <script src="./scripts/showHelp.js"></script>
+</head>
+
+<!-- onload calls fillTextBoxes() function which retrieves corresponding 
+information from local storage  -->
+<body onload="fillTextBoxes()">
+    <div data-role="header" class="input-group-text">VIEWING INBOX ITEM</div>
+
+    <!-- Divs that design inbox item page  -->
+    <div data-role="content">
+        <div class="input-group-text"  data-type="horizontal">
+        <!-- From label that onclick loads help  -->
+            <label for="partnerTextBox" class="myLabel" onclick="showHelpForFrom()">From</label>
+            <input type="email" class="unclickableLongTextBox" id="partnerTextBox">
+        </div>
+
+        <div class="input-group-text" data-type="horizontal">
+        <!-- Cc label that onclick loads help  -->
+            <label for="ccTextBox" class="myLabel" onclick="showHelpForCc()">Cc</label>
+            <input type="email" class="unclickableLongTextBox" id="ccTextBox">
+        </div>
+
+        <div class="input-group-text"  data-type="horizontal">
+        <!-- Subject label that onclick loads help  -->
+            <label for="subjectTextBox" class="myLabel" onclick="showHelpForSubject()">Subject</label>
+            <input type="email" class="unclickableLongTextBox" id="subjectTextBox">
+        </div>
+        
+        <!-- Body label that onclick loads help  -->
+        <div class="input-group-text" data-type="horizontal">
+            <label for="bodyTextBox" class="myLabel" onclick="showHelpForBody()">Body</label>
+            <textarea class="unclickableEmailTextBox" id="composeTextBox"></textarea>
+        </div>
+    </div>
+
+    <div data-role="footer" class="input-group-text"></div>
+    <!-- Reply and Back button which calls reply() function *stores inputted
+    information above in local storage which is retrieved in admin*
+    linkBackViewInbox() takes user back to previous page.  -->
+    <div data-role="controlgroup" data-type="horizontal">
+        <a data-role="button" class="btn normalButton" onclick="reply()">Reply</a>
+        <a data-role="button" class="btn normalButton" onclick="linkBackViewInbox()">Back</a>
+    </div>
+</body>
+</html>
