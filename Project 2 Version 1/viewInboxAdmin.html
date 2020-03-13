@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!-- 
+-->
+<html>
+<head>
+    <title>Admin Email System</title>
+    <link rel="stylesheet" href="./styles/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles/index.css">
+    <script src="./scripts/jquery-3.4.1.min.js"></script>
+    <script src="./scripts/viewEmails.js"></script>
+    <script src="./scripts/showHelp.js"></script>
+    <script src="./scripts/linkHelpMain.js"></script>
+</head>
+<body onload="fillTextBoxes()">
+    <div data-role="header" class="input-group-text">VIEWING INBOX ITEM</div>
+
+    <div data-role="content">
+        <div class="input-group-text"  data-type="horizontal">
+            <label for="partnerTextBox" class="myLabel" onclick="showHelpForFrom()">From</label>
+            <input type="email" class="unclickableLongTextBox" id="partnerTextBox">
+        </div>
+
+        <div class="input-group-text" data-type="horizontal">
+            <label for="ccTextBox" class="myLabel" onclick="showHelpForCc()">Cc</label>
+            <input type="email" class="unclickableLongTextBox" id="ccTextBox">
+        </div>
+
+        <div class="input-group-text"  data-type="horizontal">
+            <label for="subjectTextBox" class="myLabel" onclick="showHelpForSubject()">Subject</label>
+            <input type="email" class="unclickableLongTextBox" id="subjectTextBox">
+        </div>
+
+        <div class="input-group-text" data-type="horizontal">
+            <label for="bodyTextBox" class="myLabel" onclick="showHelpForBody()">Body</label>
+            <textarea class="unclickableEmailTextBox" id="composeTextBox"></textarea>
+        </div>
+    </div>
+
+    <div data-role="footer" class="input-group-text"></div>
+
+    <div data-role="controlgroup" data-type="horizontal">
+        <a data-role="button" class="btn normalButton" onclick="reply()">Reply</a>
+        <a data-role="button" class="btn normalButton" onclick="linkBackViewInbox()">Back</a>
+        <a data-role="button" class="btn normalButton" onclick="showHelpMain()">Help</a>
+    </div>
+</body>
+</html>

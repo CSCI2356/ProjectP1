@@ -1,0 +1,13 @@
+
+
+body {
+    background-color: lightBlue;
+}
+
+.link {
+    color: darkBlue;
+}
+
+.link:hover {
+    cursor: pointer;
+}
