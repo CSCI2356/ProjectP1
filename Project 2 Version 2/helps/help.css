@@ -1,0 +1,14 @@
+/*
+ * Humaid Muhammad Agowun (A00430163) 
+ * Mark Trickett (A00416603) 
+ * Diego Gardiner (A00423960)
+ * 
+ * css file that is used by the help screens.
+ */
+
+/*
+ * Changes the body of all the help screens blue.
+ */
+body {
+    background-color: lightBlue;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!-- 
+    Humaid Muhammad Agowun (A00430163)
+    Mark Trickett (A00416603)
+    Diego Gardiner (A00423960)
+    HTML file for the student's sent items screen.
+-->
+<html>
+<head>
+    <title>Your Email System</title>
+    <link rel="stylesheet" href="./styles/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles/index.css">
+    <script src="./scripts/jquery-3.4.1.min.js" async></script>
+    <script src="./scripts/studentScripts.js" async></script>
+    <script src="./scripts/emailRowFunctions.js" async></script>
+    <script src="./scripts/linkHelpMain.js" async></script>
+</head>
+<body  onload="loadStudentSent()">
+    <span class="myHeader"> <!--Span to change the pointer-->
+        <div data-role="header" class="input-group-text">SENT ITEMS</div>
+    </span>
+
+    <div data-role="content">
+        <div data-type="horizontal" class="btn unclickableEmailRow"> <!--The title: TO and SUBJECT, of the table -->
+            <a class="btn titleButton"><u>TO</u></a>
+            <a class="btn titleButton"><u>SUBJECT</u></a>
+            <a> </a>
+        </div>
+        <br><br>
+        <!--Below is the div into which emails are added on load-->
+        <div class="toDisplayEmails"></div>
+    </div>
+
+    <div data-role="footer" class="input-group-text"></div>
+
+    <div data-role="controlgroup"> <!--Buttons at the bottom-->
+        <a data-role="button" class="btn normalButton" onclick="linkInbox()">Inbox</a>
+        <a data-role="button" class="btn normalButton" onclick="linkStudentCompose(2)">Compose</a>
+        <a data-role="button" class="btn normalButton" onclick="showHelpMain()">Help</a>
+    </div>
+</body>
+</html>
