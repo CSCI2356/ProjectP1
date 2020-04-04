@@ -1,0 +1,31 @@
+Humaid Muhammad Agowun (A00430163) 
+Mark Trickett (A00416603) 
+Diego Gardiner (A00423960)
+READ ME to guide through the scripts
+
+
+adminScripts and StudentScripts = 
+    contain only stuff for linking between the pages: inbox, sent items, compose
+
+sendAdminEmail and sendStudentEmail = 
+    is for the SEND Button of the compose screens
+linkBackCompose 
+    has everything for linking back from the compose screen both in a 
+    reply case or cancel case
+
+emailRowFunctions = 
+    used to add the emails in the table for both inboxes and sent Items. 
+    Has the starting point for deleting and viewing emails
+
+showHelp = 
+    has the functions for when the user clicks the labels: To, From,.. 
+    in the compose and viewing screens.
+
+viewEmails = 
+    has the functions used by both the student and admin viewSent and viewInbox.
+
+linkHelpMain = 
+    is for the help directory
+
+
+Comment adminCompose, studentCompose

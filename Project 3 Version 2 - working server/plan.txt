@@ -1,0 +1,9 @@
+mongo -u<username> --authenticationDatabase <database> -p
+
+use <database>
+
+show collections
+
+db.weather2.insertOne({});
+
+show collections
