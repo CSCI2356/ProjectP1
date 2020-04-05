@@ -1,0 +1,15 @@
+mongo -u hm_agowun --authenticationDatabase hm_agowun -p
+
+
+
+show collections
+
+db.studentInbox.insertOne({emails:[]});
+db.adminSent.insertOne({emails:[]});
+
+
+use hm_agowun
+db.studentSent.insertOne({emails:[]});
+db.adminInbox.insertOne({emails:[]});
+
+show collections

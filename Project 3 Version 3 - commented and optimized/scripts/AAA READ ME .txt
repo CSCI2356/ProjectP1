@@ -1,0 +1,39 @@
+Author:
+Humaid Muhammad Agowun (A00430163) 
+Mark Trickett (A00416603) 
+Diego Gardiner (A00423960)
+
+documentation file:
+THIS FILE DETAILS the structure of the code. ALWAYS have it open when reading the files, 
+especially the scripts.
+
+1. Structure of the collections on the server and JSONs
+The collections looks like this: 
+             <name> - {emails : [email1, email2, email3]}
+
+Our email JSON looks like this: 
+ {
+      conversationPartner : ""
+      cc : ""
+      subject : ""
+      body : ""
+      read : read/unread based on whether to make bold.
+      urgency : "urgent"/"not urgent" based on whether to tick.
+ }
+
+We use one JSON to link back which looks like this:
+          {"fromWhere" : <int>}
+
+We use one JSON for when the user wants to read an email.
+          {"collectionName": name, "index" : <int>, "fromWhere" : <int>}
+
+2. One email Row in the HTML:
+  <div data-type="horizontal">
+            <div class="btn emailRow" onclick="viewEmail(i , number)"> 
+                <a class="btn {email.read}">email.conversationPartner</a>
+                <a class="btn {email.read}">email.subject</a>
+            </div>
+            <input type="checkbox" class="myCheckBox onclick=clickCheckBox(i, encoding) {checked}>
+            <a class="btn deleteKey" onclick="deleteEmail(number, i)">X</a>
+  </div>
+  The row's checkbox is checked if we want it to be ticked. 

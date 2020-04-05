@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!-- 
+    Humaid Muhammad Agowun (A00430163)
+    Mark Trickett (A00416603)
+    Diego Gardiner (A00423960)
+    HTML file for the student's compose screen.
+-->
+<html>
+<head>
+    <title>Your Email System</title>
+    <link rel="stylesheet" href="./styles/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles/index.css">
+    <script src="./scripts/jquery-3.4.1.min.js"></script>
+    <script src="./scripts/constants.js"></script>
+    <script src="./scripts/composing/composingHelperMethods.js"></script>
+    <script src="./scripts/composing/linkBackCompose.js"></script>
+    <script src="./scripts/composing/sendingEmailHelper.js"></script>
+    <script src="./scripts/composing/sendStudentEmail.js"></script>
+    <script src="./scripts/composing/studentCompose.js"></script>
+    <script src="./scripts/helps/showHelp.js"></script>
+</head>
+<body onload="prepareStudentCompose()"> <!--Loads the drop down menu options-->
+    <span class="myHeader"> <!--Span to change the pointer-->
+        <div data-role="header" class="input-group-text">COMPOSING</div>
+    </span>
+
+    <div class="unsolicitedText"> <!--Adds the yellow text-->
+        Did you know that you can click on To, Cc, Subject or Body 
+        and help will appear?
+    </div>
+
+    <div data-role="content">
+        <div class="input-group-text" data-type="horizontal"> <!--To TextBox-->
+            <label for="toDropDown" class="myLabel" onclick="showHelpForTo()">To</label>
+            <input type="text" class="longTextBox" list="adminNames" id="toDropDown">
+            <datalist id="adminNames" class="list"></datalist> <!--Data list for the To textBox-->
+        </div>
+
+        <div class="input-group-text"  data-type="horizontal"> <!--Cc TextBox-->
+            <label for="ccDropDown" class="myLabel" onclick="showHelpForCc()">Cc</label>
+            <input type="email" class="longTextBox" list="ccNames"id="ccDropDown">
+            <datalist id="ccNames" class="list"></datalist> <!--Data list for the Cc textBox-->
+        </div>
+
+        <div class="input-group-text" data-type="horizontal"> <!--Subject Textbox-->
+            <label for="subjectTextBox" class="myLabel" onclick="showHelpForSubject()">Subject</label>
+            <input type="email" class="longTextBox" id="subjectTextBox">
+        </div>
+
+        <div class="input-group-text" data-type="horizontal"> <!--Email Body Text Area-->
+            <label for="bodyTextBox" class="myLabel" onclick="showHelpForBody()">Body</label>
+            <textarea class="emailTextBox" id="composeTextBox"></textarea>
+        </div>
+    </div>
+
+    <div data-role="footer" class="input-group-text"></div>
+
+    <div data-role="controlgroup" data-type="horizontal"> <!--Buttons at the bottom-->
+        <a data-role="button" class="btn normalButton" onclick="sendStudentEmail()">Send</a>
+        <a data-role="button" class="btn normalButton" onclick="helpStudentCompose()">Help</a>
+        <a data-role="button" class="btn normalButton" onclick="cancel()">Cancel</a>
+    </div>
+</body>
+</html>
