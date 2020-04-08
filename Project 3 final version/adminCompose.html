@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!-- 
+    Humaid Muhammad Agowun (A00430163)
+    Mark Trickett (A00416603)
+    Diego Gardiner (A00423960)
+    HTML file for the admin's compose screen.
+-->
+<html>
+<head>
+    <title>Admin Email System</title>
+    <link rel="stylesheet" href="./styles/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles/index.css">
+    <script src="./scripts/jquery-3.4.1.min.js"></script>
+    <script src="./scripts/constants.js"></script>
+    <script src="./scripts/composing/composingHelperMethods.js"></script>
+    <script src="./scripts/composing/linkBackCompose.js"></script>
+    <script src="./scripts/composing/sendingEmailHelper.js"></script>
+    <script src="./scripts/composing/sendAdminEmail.js"></script>
+    <script src="./scripts/composing/adminCompose.js"></script>
+    <script src="./scripts/helps/showHelp.js"></script>
+</head>
+<body onload="prepareAdminCompose()"> <!--Loads the drop down menu options-->
+    <span class="myHeader"> <!--Span to change the pointer-->
+        <div data-role="header" class="input-group-text">COMPOSING</div> 
+    </span>
+
+    <div class="unsolicitedText"> <!--Adds the yellow text-->
+        Did you know that you can click on To, Cc, Subject or Body 
+        and help will appear?
+    </div>
+
+    <div data-role="content">
+        <div class="input-group-text" data-type="horizontal"> <!--To TextBox-->
+            <label for="toDropDown" class="myLabel" onclick="showHelpForTo()" >To</label>
+            <input list="studentNames" type="text" class="longTextBox" id="toDropDown">
+            <datalist class="list" id="studentNames"></datalist> <!--Data list for the To textBox-->
+        </div>
+
+        <div class="input-group-text" data-type="horizontal"> <!--From TextBox-->
+            <label for="fromDropDown" class="myLabel" onclick="showHelpForFrom()" >From</label>
+            <input list="adminNames" type="text" class="longTextBox" id="fromDropDown">
+            <datalist class="list" id="adminNames"></datalist> <!--Data list for the From textBox-->
+        </div>
+
+        <div class="input-group-text"  data-type="horizontal"> <!--Cc TextBox-->
+            <label for="ccDropDown" class="myLabel" onclick="showHelpForCc()">Cc</label>
+            <input list="ccNames" type="text" class="longTextBox" id="ccDropDown">
+            <datalist class="list" id="ccNames"></datalist> <!--Data list for the Cc textBox-->
+        </div>
+
+        <div class="input-group-text" data-type="horizontal"> <!--Subject Textbox-->
+            <label for="subjectTextBox" class="myLabel" onclick="showHelpForSubject()">Subject</label>
+            <input type="email" class="longTextBox" id="subjectTextBox">
+        </div>
+
+        <div class="input-group-text" data-type="horizontal"> <!--Email Body Text Area-->
+            <label for="bodyTextBox" class="myLabel" onclick="showHelpForBody()">Body</label>
+            <textarea class="emailTextBox" id="composeTextBox"></textarea>
+        </div>
+    </div>
+
+    <div data-role="footer" class="input-group-text"></div>
+
+    <div data-role="controlgroup" data-type="horizontal"> <!--Buttons at the bottom-->
+        <a data-role="button" class="btn normalButton" onclick="sendAdminEmail()">Send</a>
+        <a data-role="button" class="btn normalButton" onclick="helpAdminCompose()">Help</a>
+        <a data-role="button" class="btn normalButton" onclick="cancel()">Cancel</a>
+    </div>
+</body>
+</html>

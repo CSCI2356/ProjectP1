@@ -1,0 +1,28 @@
+adminScripts: 
+    it contains the method to link between the pages on the admin screens.
+    it also contains the method that load emails but that method just calls one in displayEmails.js
+    it deals with what happens when the HELP buttons are clicked on the admin base screens
+
+studentScripts: 
+    it contains the method to link between the pages on the admin screens.
+    it also contains the method that load emails but that method just calls one in displayEmails.js
+    it deals with what happens when the HELP buttons are clicked on the student base screens
+
+displayEmails.js:
+    it contains all the methods to diplay the email rows. It is used by both student and admin
+
+displayEmailsHelper.js:
+    it contains methods used by displayEmails so that code from displayEmails is more readable.
+    it contains the method that creates the deleteKEy, checkBox and email buttons strings
+    it also contains the methods to go from encoding to name and vice-versa.
+
+deleteKey.js:
+    it contains the functions that are read when an email is deleted.
+
+checkBox.js:
+    it contains the functions that are read when a checkbox is clicked.
+
+settingUpToViewAnEmail.js:
+    it contains the method that links to a view page and set up the local storage for the scripts in viewEmails
+
+

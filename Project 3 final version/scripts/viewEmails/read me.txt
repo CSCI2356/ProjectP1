@@ -1,0 +1,10 @@
+
+backAndHelp.js:
+    It contains all the methods read when a BACK or a HELP button is clicked in the viewing an email pages.
+
+fillTextBoxes.js:
+    It contains the functions that uses the local storage to get the email from the server.
+    It then fills the text boxes based on the email retreived from the server.
+
+reply.js:
+    It links to the compose screen for a reply. Sets up the ways to back away from the screens.

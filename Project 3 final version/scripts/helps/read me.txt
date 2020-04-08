@@ -1,0 +1,11 @@
+help.css:
+    contains the css for changing the pages blue.
+
+help.js:
+    contains the methods that load the messages onto the screens.
+    THE MESSAGES TO BE SHOWN WHEN A LABEL IS CLICKED ARE HERE.
+
+showHelp.js:
+    contains the methods that create a windw for the helps.
+
+The html files are the same except that their body have different names to allow loading the messages.

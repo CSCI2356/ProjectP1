@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!-- 
+    Humaid Muhammad Agowun (A00430163)
+    Mark Trickett (A00416603)
+    Diego Gardiner (A00423960)
+    HTML file used when a student views an inbox email item.
+-->
+<html>
+<head>
+    <title>Your Email System</title>
+    <link rel="stylesheet" href="./styles/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles/index.css">
+    <script src="./scripts/jquery-3.4.1.min.js" async></script>
+    <script src="./scripts/constants.js" async></script>
+    <script src="./scripts/viewEmails/backAndHelp.js" async></script>
+    <script src="./scripts/viewEmails/fillTextBoxes.js" async></script>
+    <script src="./scripts/viewEmails/reply.js" async></script>
+    <script src="./scripts/helps/showHelp.js" async></script>
+</head>
+<body onload="fillTextBoxes()"> <!--Fills in the text boxes as per the email clicked-->
+    <span class="myHeader"> <!--Span to change the pointer-->
+        <div data-role="header" class="input-group-text">VIEWING INBOX ITEM</div>
+    </span>
+
+    <div data-role="content">
+        <div class="input-group-text"  data-type="horizontal"> <!--From TextBox-->
+            <label for="partnerTextBox" class="myLabel" onclick="showHelpForFrom()">From</label>
+            <input type="email" class="unclickableLongTextBox" id="partnerTextBox">
+        </div>
+
+        <div class="input-group-text" data-type="horizontal"> <!--Cc TextBox-->
+            <label for="ccTextBox" class="myLabel" onclick="showHelpForCc()">Cc</label>
+            <input type="email" class="unclickableLongTextBox" id="ccTextBox">
+        </div>
+
+        <div class="input-group-text"  data-type="horizontal">  <!--Subject Textbox-->
+            <label for="subjectTextBox" class="myLabel" onclick="showHelpForSubject()">Subject</label>
+            <input type="email" class="unclickableLongTextBox" id="subjectTextBox">
+        </div>
+
+        <div class="input-group-text" data-type="horizontal"> <!--Email Body Text Area-->
+            <label for="bodyTextBox" class="myLabel" onclick="showHelpForBody()">Body</label>
+            <textarea class="unclickableEmailTextBox" id="composeTextBox"></textarea>
+        </div>
+    </div>
+
+    <div data-role="footer" class="input-group-text"></div>
+
+    <div data-role="controlgroup" data-type="horizontal"> <!--Buttons at the bottom-->
+        <a data-role="button" class="btn normalButton" onclick="reply()">Reply</a>
+        <a data-role="button" class="btn normalButton" onclick="linkBackViewInbox()">Back</a>
+        <a data-role="button" class="btn normalButton" onclick="helpStudentViewInbox()">Help</a>
+    </div>
+</body>
+</html>

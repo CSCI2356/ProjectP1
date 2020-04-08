@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!-- 
+    Humaid Muhammad Agowun (A00430163)
+    Mark Trickett (A00416603)
+    Diego Gardiner (A00423960)
+    HTML file for the admin's inbox screen.
+-->
+<html>
+<head>
+    <title>Admin Email System</title>
+    <link rel="stylesheet" href="./styles/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles/index.css">
+    <script src="./scripts/jquery-3.4.1.min.js" async></script>
+    <script src="./scripts/constants.js" async></script>
+    <script src="./scripts/inboxAndSentItems/adminScripts.js" async></script>
+    <script src="./scripts/inboxAndSentItems/deleteKey.js" async></script>
+    <script src="./scripts/inboxAndSentItems/checkBox.js" async></script>
+    <script src="./scripts/inboxAndSentItems/displayEmails.js" async></script>
+    <script src="./scripts/inboxAndSentItems/displayEmailsHelper.js" async></script>
+    <script src="./scripts/inboxAndSentItems/settingUpToViewEmail.js" async></script>
+</head>
+<body onload="loadAdminInbox()">
+    <span class="myHeader"> <!--Span to change the pointer-->
+        <div data-role="header" class="input-group-text">INBOX</div>
+    </span>
+
+    <div data-role="content">
+        <div data-type="horizontal" class ="btn unclickableEmailRow">  <!--The title: FROM and SUBJECT, of the table -->
+            <a class="btn titleButton"><u>FROM</u></a>
+            <a class="btn titleButton"><u>SUBJECT</u></a>
+            <a> </a>
+        </div>
+        <br><br>
+        <!--Below is the div into which emails are added on load-->
+        <div class="email0"></div> 
+        <div class="email1"></div> 
+        <div class="email2"></div> 
+        <div class="email3"></div> 
+        <div class="email4"></div> 
+        <div class="email5"></div> 
+        <div class="email6"></div> 
+        <div class="email7"></div> 
+        <div class="email8"></div> 
+        <div class="email9"></div> 
+    </div>
+
+    <div data-role="footer" class="input-group-text"></div>
+
+    <div data-role="controlgroup"> <!--Buttons at the bottom-->
+        <a data-role="button" class="btn normalButton" onclick="linkAdminSent()">Sent Items</a>
+        <a data-role="button" class="btn normalButton" onclick="linkAdminCompose(3)">Compose</a>
+        <a data-role="button" class="btn normalButton" onclick="helpAdminInbox()">Help</a>
+    </div>
+</body>
+</html>

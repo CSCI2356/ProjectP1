@@ -1,0 +1,272 @@
+/*
+ * Humaid Muhammad Agowun (A00430163) 
+ * Mark Trickett (A00416603) 
+ * Diego Gardiner (A00423960)
+ * 
+ * css file that is used by all the screens for project 2 
+ * except the help screens.
+ *
+ * We start with the HTML elements, then the classes and finally the IDs.
+ */
+
+
+/*HTML Elements*/
+/*
+ * Css to make the body of all the screen grey.
+ * For now we want the body to take 50% of the screen but this 
+ * will change as we code for phones.
+ */
+body {
+    background-color :#f8f9fa; /*RGB for grey*/ 
+    width: 60%;
+}
+
+/*
+ * Css used to change the labels of the COMPOSE And VIEWING SCREENS: To, From, 
+ * Cc, Subject and Body.
+ */
+label {
+    padding: 10px 10px 0px 10px; /*top right bottom left*/
+    width: 70px;
+    text-align : right;
+}
+
+
+/*CLASSES*/
+
+
+
+/*Below will be the classes using in the inbox and sent item screens*/
+
+
+
+/*
+ * Class used in spans to make the pointer of headers not change but
+ * stay as an arrow.
+ */
+.myHeader:hover {
+    cursor : default; /*Default is the css for an arrow pointer*/
+}
+
+/*
+ * Class used for the titles in the inbox and sent items screen.
+ * It forces the pointer to not change into a hand.
+ */
+.unclickableEmailRow:hover {
+    cursor: default;
+}
+
+/*
+ * Class used for the titles in the inbox and sent items screen.
+ * Makes the row take 90% of the body
+ */
+.unclickableEmailRow {
+    width: 90%;
+}
+
+/*
+ * Class used for the email row of the inbox and sent items screen.
+ * Makes the email take 90% of the body
+ */
+.emailRow {
+    width: 90%;
+}
+
+/*
+ * Class used for the hover of email row of the inbox and sent items screen.
+ * Makes the whole row change to dark grey when an email is pointed at.
+ * Also explicitly changes the arrow to a hand.
+ */
+.emailRow:Hover, div.emailRow:Hover a.read, div.emailRow:Hover a.unread  {
+    background-color: darkgrey; 
+    cursor: pointer; /*pointer is the value for a hand.*/
+}
+
+/*
+ * Used for one of the buttons for the title: TO, FROM, SUBJECT
+ * in the inbox and sent item screens.
+ */
+.titleButton {
+    width: 49%;
+    text-align: left;
+    background-color: #f8f9fa; /*RGB for grey*/
+    font-weight: bold;
+}
+
+/*
+ * Used for one of the buttons for an email in a row in the inbox and 
+ * sent item screens.
+ * For a read email, the text is not bold.
+ */
+.read {
+    width: 49%;
+    text-align: left;
+    background-color: #f8f9fa; /*RGB for grey*/
+}
+
+/*
+ * Used for one of the buttons for an email in a row in the inbox and 
+ * sent item screens.
+ * For an unread email, the text is bold.
+ */
+.unread {
+    width: 49%;
+    text-align: left;
+    background-color: #f8f9fa; /*RGB for grey*/
+    font-weight: bold;
+}
+
+/*
+ * Used for the delete key/cross in inbox and sent Items screens.
+ * Makes it take some space.
+ */
+.deleteKey {
+    width: 3%;
+    text-align: center;
+}
+
+/*
+ * Used for the delete key/cross in inbox and sent Items screens.
+ * The class makes the delete key turn red on hover.
+ */
+.deleteKey:hover {
+    background-color: red;
+}
+
+/*
+ * This is used for a button in a control group/at the bottom.
+ * It makes the button wide enough and grey.
+ */ 
+.normalButton {
+    width: 150px;
+    text-align: center;
+    font-weight: 500;
+    background-color: lightgray;
+    transition-duration: 0.4s;
+}
+
+/*
+ * This is used for a button in a control group/at the bottom.
+ * It makes the button change to white on hover and forces the pointer
+ * to stay as an arrow.
+ */ 
+.normalButton:hover {
+    background-color: snow;
+    cursor : default; /*Default is the value for an arrow pointer*/
+}
+
+
+
+/*Below will be the classes used in the compose and viewing screens*/
+
+
+/*
+ * This is the class for the yellow text in the composing screens and 
+ * viewing screens stating that the labels  can be clicked.
+ */ 
+.unsolicitedText {
+    background-color : lightYellow;
+    height: 40px;
+    padding-top: 5px;
+    padding-left: 10px
+}
+
+/*
+ * Makes the hover for To, From, Cc, Subject, Body of the label for the
+ * textboxes of the composing and viewing screens have a pointer with
+ * a small arrow.
+ */ 
+.myLabel:hover {
+    cursor: help;
+}
+
+/*
+ * Makes the To, From, Cc, Subject, Body labels for the
+ * textboxes of the composing and viewing screens take some space.
+ */ 
+.myLabel {
+    width: 10%;
+}
+
+/*
+ * Makes the To, From, Cc and Subject Text Boxes of the composing
+ * screens take the whole space.
+ * Adds some padding so the user don't type from the far left.
+ */ 
+.longTextBox {
+    width : 90%;
+    padding: 5px;
+}
+
+/*
+ * Makes the To, From, Cc and Subject Text Boxes of the viewing screens 
+ * take the whole space. Adds some padding so the user don't type from the 
+ * far left.
+ * We also make the text appear grey. We also tried an unsuccessful attempt 
+ * to make the textbox unclickable.
+ *
+ */ 
+.unclickableLongTextBox {
+    width : 90%;
+    padding: 5px;
+    color: grey;
+
+}
+
+/*
+ * Css for the email body of the composing screens.
+ */ 
+.emailTextBox {
+    width : 90%;
+    box-sizing: border-box;
+    height: 300px;
+    padding: 5px;
+}
+
+/*
+ * Css for the email body of the viewing screens.
+ * We also make the text appear grey. We also tried an unsuccessful attempt 
+ * to make the textbox unclickable.
+ */ 
+.unclickableEmailTextBox {
+    width : 90%;
+    box-sizing: border-box;
+    height: 300px;
+    padding: 5px;
+    color: grey;
+}
+
+/*
+ * Overriding bootstrap for the email compartment, that is the body compartment
+ * to add some padding.
+ */
+.emailCompartment { 
+    /*part that was copied from input-group-text*/
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: .375rem .75rem;
+    margin-bottom: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    text-align: center;
+    white-space: nowrap;
+    background-color: #e9ecef;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    /*part that was added*/
+    padding : 10px;
+    padding-left: 80px;
+}
+
+/*
+ * style for checkbox in all the inbox and sent items screens.
+ */ 
+.myCheckBox {
+    width : 5%;
+    height : 15px;
+    margin:0px;
+}

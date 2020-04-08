@@ -1,0 +1,28 @@
+
+adminCompose.js:
+    It contains the files used to check if there is enough space to compose for the admin.
+    It contains the files to load the dropdown options for the admin.
+
+studentCompose.js:
+    It contains the files used to check if there is enough space to compose for the student.
+    It contains the files to load the dropdown options for the student.
+
+composingHelperMethods.js:
+    It contains the methods to help the loading of the dropdown options.
+    It contains the ARRAY OF NAMES used to load the dropdown options...  ARRAY OF NAMES IS HERE.
+    It contains the methods for when the help button is clicked.
+
+linkBackCompose.js:
+    It contains all the methods for returning from the compose screen.
+    This includes all returning INCLUDING: returning after sending an email, cancelling, replying and not enough space.
+
+sendAdminEmail.js:
+    It contains the methods that send an email when the admin clicks SEND.
+
+sendStudentEmail.js:
+    It contains the methods that send an email when the student clicks SEND.
+
+sendingEmailHelper.js:
+    It contains the methods that BOTH the admin and student uses to send an email.
+    It contains the REVIEW_MESSAGE that both the admin and student uses. REVIEW MESSAGE IS HERE.
+

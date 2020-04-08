@@ -1,0 +1,40 @@
+Below are the calls inside mongodb to create the required collections for the code to work 
+
+mongo -u hm_agowun --authenticationDatabase hm_agowun -p
+
+show collections
+use hm_agowun
+db.studentInbox.insertOne({emails:[]});
+db.adminSent.insertOne({emails:[]});
+db.studentSent.insertOne({emails:[]});
+db.adminInbox.insertOne({emails:[]});
+show collections
+
+
+ALSO our project has a DEBUG flag
+    if you want helpful messages to be displayed to help debugging set BOTH of the following booleans to TRUE
+    DEBUG is constants.js
+    DEBUG_SERVER in server.js
+
+The structure of the scripts:
+Our team tried very hard to breakdown the scripts as much as possible.
+In the project directory: 
+    you will find server.js which should be run with node server.js
+        The file contains ALL the server code.
+
+In the styles directory:
+    You will find index.css which contains the styles used by all the screens.
+    Note that the help windows use another css file in scripts/helps/help.css to turn the pages blue
+
+In the script directory:    /************VERY IMPORTANT*************/
+    the read me file in this directory explains how the JSON and the collections are set up.
+    You will find constant.js:
+        It contains all the constants that ALL the files use. Be sure to be familiar with them.
+    The composing directory contains all the scripts that help the composing screens. 
+        Read the "read me" in it for more details.
+    The helps directory contains all the scripts AND the html for the help screens.
+        Read the "read me" there for more details.
+    The inboxAndSentItems directory contains all the scripts used by the inbox and sent items screens. 
+        Read the "read me" there for more details.
+    The viewEmails directory contains all the scripts used by the viewInbox and viewSent screens.
+        Read the "read me" there for more details.
